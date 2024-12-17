@@ -27,7 +27,7 @@ export default function Premium() {
     }
 
     // Fetch order ID from the server
-    const response = await fetch("http://localhost:3000/order", {
+    const response = await fetch(process.env.BACKEND_URL + "/order", {
       method: "POST",
     });
     const orderData = await response.json();
@@ -82,7 +82,7 @@ export default function Premium() {
         paymentAmount: paymentAmount,
       };
       try {
-        const response = await fetch("http://localhost:3000/premiumUpdate", {
+        const response = await fetch(process.env.BACKEND_URL +"/premiumUpdate", {
           method: "POST",
           headers: {
             "Content-type": "application/json",

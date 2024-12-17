@@ -18,7 +18,7 @@ function Movie() {
   useEffect(() => {
     async function fetching() {
       try {
-        const response = await fetch("http://localhost:3000/user/fetchUser", {
+        const response = await fetch(process.env.BACKEND_URL + "/user/fetchUser", {
           method: "POST",
           credentials: "include",
         });
