@@ -12,7 +12,7 @@ const corsOption = {
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type','Authorization'],
 }
-app.options('*', cors(corsOption));
+app.use(cors(corsOption));
 app.use(express.json({limit:"50mb"}))
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser());

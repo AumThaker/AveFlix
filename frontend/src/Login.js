@@ -11,7 +11,6 @@ export default function Login(){
 function Form({setRes}){
     let [errorMsg,setErrorMsg] = useState(null)
     async function LoginBtn(e){
-        console.log(process.env.REACT_APP_BACKEND_URL)
         let form = e.target
         e.preventDefault()
         let formdata = new FormData(form)
