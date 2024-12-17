@@ -8,9 +8,11 @@ import { Premium } from "./src/models/premiumModel.js";
 const app = express(); 
 const corsOption = {
     origin:['https://ave-flix.vercel.app'],
-    credentials:true, 
+    credentials:true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type'],
 }
-app.options('*',cors(corsOption));
+app.use(cors(corsOption));
 app.use(express.json({limit:"50mb"}))
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser());
