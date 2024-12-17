@@ -7,7 +7,7 @@ import cron from "node-cron"
 import { Premium } from "./src/models/premiumModel.js";
 const app = express(); 
 const corsOption = {
-    origin:['http://localhost:3001'],
+    origin:['https://ave-flix.vercel.app'],
     credentials:true, 
 }
 app.use(cors(corsOption));
