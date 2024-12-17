@@ -39,6 +39,7 @@ cron.schedule("0 0 * * *", async () => { // Runs daily at midnight
 });
 import userroute from "./src/routes/userRoutes.js";
 import { createOrder, fetchPremium, premiumUpdate } from "./src/controllers/premiumControl.js";
+app.get("/",(req,res)=>{res.send("Backend Ready")})
 app.use("/user",userroute);
 app.post('/order',createOrder)
 app.post('/premiumUpdate',premiumUpdate)
