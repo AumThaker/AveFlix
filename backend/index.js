@@ -10,7 +10,7 @@ const corsOption = {
     origin:['https://ave-flix.vercel.app'],
     credentials:true, 
 }
-app.use(cors(corsOption));
+app.options('*',cors(corsOption));
 app.use(express.json({limit:"50mb"}))
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser());
