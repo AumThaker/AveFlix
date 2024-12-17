@@ -15,8 +15,9 @@ app.use(express.json({limit:"50mb"}))
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser());
 dotenv.config({path:"./.env"})
+const port = process.env.PORT || 3000;
 await connectDB().then(()=>{
-    app.listen(3000 , ()=>{
+    app.listen(port , ()=>{
         console.log("server started");
     });
 }
