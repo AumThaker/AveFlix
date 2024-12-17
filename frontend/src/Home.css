@@ -1,0 +1,305 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #202020; /* Dark background for a cinematic feel */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+nav h1 {
+    color: #E62429; /* Marvel red */
+    font-family: 'Bebas Neue', sans-serif; /* Bold font style for Marvel vibe */
+    font-size: 2rem;
+    margin: 0;
+    text-transform: uppercase; /* All caps for boldness */
+    letter-spacing: 2px; /* Slightly spaced letters for a dramatic look */
+}
+
+nav button {
+    background-color: #E62429; /* Marvel red */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav button:hover {
+    background-color: #B71C1C; /* Darker red on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+nav button:active {
+    background-color: #8E0000; /* Even darker red on click */
+    transform: scale(0.95); /* Slight shrink on click */
+}
+#premium{
+    background-color: initial;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-color: #E62429;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+nav h2{
+    color: white; /* Marvel red */
+    font-family: 'Bebas Neue', sans-serif; /* Bold font style for Marvel vibe */
+    font-size: 1.5rem;
+    margin: 0;
+    text-transform: uppercase; /* All caps for boldness */
+    letter-spacing: 2px; /* Slightly spaced letters for a dramatic look */
+}
+.leftNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+.bi-caret-down-fill{
+    color: #E62429;
+}
+.movies {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px; /* Adjust spacing between posters */
+    padding: 20px;
+    background-color: #1d1f27; /* Marvel-themed dark background */
+  }
+  
+  .movie {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .movie img {
+    width: 100%;
+    height: auto;
+    filter: blur(1px); /* Blurs the poster */
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+  
+  .movie:hover img {
+    filter: blur(0); /* Removes the blur on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  .movie h3:nth-child(2) { /* The first <h3> is the title */
+    font-family: 'Bebas Neue', sans-serif; /* Replace with a bold Marvel-inspired font if available */
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #e62429; /* Marvel's iconic red */
+    margin: 10px 5px 5px;
+    text-align: left;
+  }
+  
+  /* Release Year Styling */
+  .movie h3:nth-child(3) { /* The second <h3> is the release year */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: lighter;
+    color: #d3d3d3; /* Light white for subtle contrast */
+    margin: 0px 5px 10px;
+    text-align: left;
+  }
+  
+  /* Movie Length Styling */
+  .movie h3:nth-child(4) { /* The third <h3> is the movie length */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: lighter;
+    color: #d3d3d3; /* Light white */
+    margin: 0;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    text-align: right;
+  }
+
+  .movie::after {
+    content: '▶'; /* Play icon */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  
+  .movie:hover::after {
+    opacity: 1;
+  }
+  
+  .movie:hover {
+    transform: scale(1.1); /* Slightly enlarges the card */
+    box-shadow: 0 8px 16px rgba(255, 0, 0, 0.5); /* Marvel-themed red glow */
+  }
+  .fullpage-wrapper {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .reactor-container {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border: 1px dashed #888;
+    position: relative;
+    border-radius: 50%;
+    background-color: #384c50;
+    border: 1px solid rgb(18, 20, 20);
+    box-shadow: 0px 0px 32px 8px rgb(18, 20, 20), 0px 0px 4px 1px rgb(18, 20, 20) inset;
+  }
+  .reactor-container-inner {
+    height: 238px;
+    width: 238px;
+    background-color: rgb(22, 26, 27);;
+    box-shadow: 0px 0px 4px 1px #52FEFE;
+  }
+  
+  .circle {
+    border-radius: 50%;
+  }
+  .abs-center {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  .core-inner {
+    width: 70px;
+    height: 70px;
+    border: 5px solid #1B4E5F;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 7px 5px #52FEFE, 0px 0px 10px 10px #52FEFE inset;
+  }
+  .core-outer {
+    width: 120px;
+    height: 120px;
+    border: 1px solid #52FEFE;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 2px 1px #52FEFE, 0px 0px 10px 5px #52FEFE inset;
+  }
+  .core-wrapper {
+    width: 180px;
+    height: 180px;
+    background-color: #073c4b;
+    box-shadow: 0px 0px 5px 4px #52FEFE, 0px 0px 6px 2px #52FEFE inset;
+  }
+  .tunnel {
+    width: 220px;
+    height: 220px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 5px 1px #52FEFE, 0px 0px 5px 4px #52FEFE inset;
+  }
+  .coil-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: 3s infinite linear reactor-anim;
+  }
+  .coil {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    top: calc(50% - 110px);
+    left: calc(50% - 15px);
+    transform-origin: 15px 110px;
+    background-color:#073c4b;
+    box-shadow: 0px 0px 5px #52FEFE inset;
+  }
+  .coil-1 {
+    transform: rotate(0deg);
+  }
+  .coil-2 {
+    transform: rotate(45deg);
+  }
+  .coil-3 {
+    transform: rotate(90deg);
+  }
+  .coil-4 {
+    transform: rotate(135deg);
+  }
+  .coil-5 {
+    transform: rotate(180deg);
+  }
+  .coil-6 {
+    transform: rotate(225deg);
+  }
+  .coil-7 {
+    transform: rotate(270deg);
+  }
+  .coil-8 {
+    transform: rotate(315deg);
+  }
+  @keyframes reactor-anim {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .notification {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    position: fixed; /* Makes the notification sticky */
+    bottom: 20px; /* Positions it 20px above the bottom edge */
+    right: 20px; /* Positions it 20px from the right edge */
+    background-color: #e62429; /* Marvel red */
+    color: #ffffff; /* White text */
+    padding: 0px 20px; /* Spacing inside the notification */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    font-family: 'Roboto', sans-serif; /* Clean, modern font */
+    font-size: 16px; /* Adjust the text size */
+    font-weight: bold; /* Make the text bold */
+    z-index: 1000; /* Ensures it appears above other elements */
+    animation: slideIn 0.5s ease-out; /* Smooth entrance animation */
+  }
+  
+  /* Entrance animation */
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%); /* Start off-screen */
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0); /* Slide into position */
+      opacity: 1;
+    }
+  }
+  
+  /* Add hover effect */
+  .notification:hover {
+    background-color: #c71e24; /* Slightly darker red on hover */
+    cursor: pointer; /* Indicate interactivity */
+  }

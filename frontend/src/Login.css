@@ -1,0 +1,125 @@
+#intro{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    filter: blur(13px);
+}
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25vw;
+    height: 42vh;
+    background: rgba(255, 255, 255, 0.1); /* Transparent effect */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-radius: 15px; /* Smooth rounded corners */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border */
+    color: white;
+    font-family: Arial, sans-serif;
+}
+.loginForm h1{
+    font-family: "Impact", sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #af2f00;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.LoginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    font-family: "Segoe UI", sans-serif;
+    color: #fff;
+    margin: auto;
+}
+.LoginForm label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
+    color: #fff;
+}
+
+.LoginForm input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.LoginForm input::placeholder {
+    color: #ddd;
+}
+
+.LoginForm button {
+    padding: 12px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    background: #ff4500; /* Marvel red */
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.LoginForm button:hover {
+    background: #e63900;
+}
+
+.LoginForm button:active {
+    background: #cc3300;
+}
+
+#errorMsg{
+    color: red;
+}
+.loggedin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25vw;
+    height: 40vh;
+    background: rgba(255, 255, 255, 0.1); /* Transparent effect */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-radius: 15px; /* Smooth rounded corners */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border */
+    color: white;
+    font-family: Arial, sans-serif;
+}
+.loggedin button {
+    padding: 12px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    background: #ff4500; /* Marvel red */
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
