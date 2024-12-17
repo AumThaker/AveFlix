@@ -16,7 +16,7 @@ function Form({setRes}){
         let formdata = new FormData(form)
         let formObject = Object.fromEntries(formdata.entries())
         try {
-            const response = await fetch(process.env.BACKEND_URL + "/user/loginUser", {
+            const response = await fetch(process.env.REACT_APP_BACKEND_URL + "/user/loginUser", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
