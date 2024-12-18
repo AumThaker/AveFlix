@@ -106,7 +106,7 @@ const loginUser = async (req, res) => {
   await user.save({ validate: false });
   return res
     .status(200)
-    .cookie("LoginToken", token, { httpsOnly: true, secure: true })
+    .cookie("LoginToken", token, { httpsOnly: true, secure: true, sameSite:"None" })
     .json({
       result: true,
       message: "User Successfully Logged In",
