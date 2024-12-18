@@ -37,7 +37,7 @@ export default function Home() {
   useEffect(()=>{
     try {
         async function moviesApi(){
-            const response = await fetch("http://localhost:5000/api",{
+            const response = await fetch(process.env.REACT_APP_MOVIEAPI_URL + "/api",{
                 method:"GET"
             })
             if (!response.ok) {

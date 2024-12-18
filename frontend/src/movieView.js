@@ -48,7 +48,7 @@ function Movie() {
         let movieKeyJson = {
           movie: movieKey,
         };
-        const response = await fetch("http://localhost:5000/movies", {
+        const response = await fetch(process.env.REACT_APP_MOVIEAPI_URL + "/movies", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
