@@ -13,7 +13,7 @@ export default function Home() {
   useEffect(() => {
     async function fetching() {
       try {
-        const response = await fetch(process.env.BACKEND_URL + "/user/fetchUser", {
+        const response = await fetch(process.env.REACT_APP_BACKEND_URL + "/user/fetchUser", {
           method: "POST",
           credentials: "include",
         });
