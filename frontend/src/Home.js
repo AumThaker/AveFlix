@@ -17,15 +17,12 @@ export default function Home() {
           method: "POST",
           credentials: "include",
         });
-        let data;
-        try{
-          data = await response.json()
-        }catch(err){
-          console.log(err)
+        if (!response.ok) {
+          const error = await response.json();
+          console.log(error)
         }
-        if(!response.ok){
-          console.error(data)
-        }
+
+        const data = await response.json();
         if (data.result) {
           setTokenStatus(true);
           setUserData(data);
