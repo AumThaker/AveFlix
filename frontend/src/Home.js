@@ -19,7 +19,7 @@ export default function Home() {
         });
         if (!response.ok) {
           const error = await response.json();
-          return error;
+          console.log(error)
         }
 
         const data = await response.json();
