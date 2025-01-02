@@ -127,6 +127,7 @@ const logoutUser = async (req, res) => {
 };
 
 const fetchUser = async (req, res) => {
+  console.log(req.cookies)
   const userToken = req.cookies.LoginToken;
   if (!userToken) return res.status(400).json("Not logged in");
   const user = await User.findOne({ token: userToken });
