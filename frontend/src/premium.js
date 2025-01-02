@@ -1,3 +1,4 @@
+import './premium.css'
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -133,7 +134,11 @@ export default function Premium() {
     <>
       {pre ? null :
         <>
-          <button onClick={handlePayment}>Pay</button>
+        <div className="premiumBox">
+        <h1>Premium Member</h1>
+        <span>Rs 10 per month</span>
+        <button onClick={handlePayment}>Pay Now</button>
+        </div>
           {res?navigate("/"):null}
         </>
       }
