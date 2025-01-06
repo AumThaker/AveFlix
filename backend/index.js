@@ -24,7 +24,7 @@ await connectDB().then(()=>{
     });
 }
 ).catch((err)=>{console.log("server not started");})
-cron.schedule("0 0 * * *", async () => { // Runs daily at midnight
+cron.schedule("* * * * *", async () => { // Runs daily at midnight
     try {
         const expiredUsers = await Premium.find({ expirationDate: { $lt: new Date() } });
 
