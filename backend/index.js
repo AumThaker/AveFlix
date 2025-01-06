@@ -45,7 +45,7 @@ agenda.define("check expired premium users", async () => {
 });
 (async function () {
     await agenda.start();
-    await agenda.every("0 0 * * *", "check expired premium users");
+    await agenda.every("* * * * *", "check expired premium users");
 })();
 import userroute from "./src/routes/userRoutes.js";
 import { createOrder, fetchPremium, premiumUpdate } from "./src/controllers/premiumControl.js";
