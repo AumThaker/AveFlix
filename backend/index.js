@@ -3,7 +3,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import connectDB from "./src/database/db.js";
 import dotenv from "dotenv"
-import cron from "node-cron"
+import Agenda from "agenda"
 import { Premium } from "./src/models/premiumModel.js";
 const app = express(); 
 const corsOption = {
@@ -26,7 +26,9 @@ await connectDB().then(()=>{
     });
 }
 ).catch((err)=>{console.log("server not started");})
-cron.schedule("* * * * *", async () => { // Runs daily at midnight
+const agenda = new Agenda({ db: { address: process.env.MONGO_LINK } });
+
+agenda.define("check expired premium users", async () => {
     try {
         const expiredUsers = await Premium.find({ expirationDate: { $lt: new Date() } });
 
@@ -41,6 +43,10 @@ cron.schedule("* * * * *", async () => { // Runs daily at midnight
         console.error("Error during premium expiration cleanup:", error);
     }
 });
+(async function () {
+    await agenda.start();
+    await agenda.every("0 0 * * *", "check expired premium users");
+})();
 import userroute from "./src/routes/userRoutes.js";
 import { createOrder, fetchPremium, premiumUpdate } from "./src/controllers/premiumControl.js";
 app.get("/",(req,res)=>{res.send("Backend Ready")})
