@@ -20,7 +20,7 @@ function Form({setResult}){
         const formData = new FormData(form);
         const formObject = Object.fromEntries(formData.entries());
         try {
-            const response = await fetch(process.env.BACKEND_URL + "/user/registerUser", {
+            const response = await fetch(process.env.REACT_APP_BACKEND_URL + "/user/registerUser", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
