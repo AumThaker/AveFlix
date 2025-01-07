@@ -90,7 +90,9 @@ export default function Home() {
           </>
         ) : (
           <div className="leftNav">
-            <h2>Terms And Conditions</h2>
+            <Link to='/termandconditions'>
+          <h2>Terms And Conditions</h2>
+          </Link>
             <Link to="/premium"><button id="premium">Premium</button></Link>
             <h2>{userData.user.username}</h2>
           </div>
