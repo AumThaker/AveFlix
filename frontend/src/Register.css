@@ -116,6 +116,38 @@ body {
     color: red;
 }
 
+.registered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25vw;
+    height: 40vh;
+    background: rgba(255, 255, 255, 0.1); /* Transparent effect */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-radius: 15px; /* Smooth rounded corners */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border */
+    color: white;
+    font-family: Arial, sans-serif;
+}
+.registered button {
+    padding: 12px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    background: #ff4500; /* Marvel red */
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 1200px) {
     .registration {
