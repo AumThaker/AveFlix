@@ -1,3 +1,4 @@
+/* Main container */
 .mainContainer {
   padding: 20px;
   max-width: 1200px;
@@ -5,6 +6,7 @@
   font-family: 'Bebas Neue', sans-serif;
 }
 
+/* Video container */
 .video-container {
   text-align: center;
   margin-bottom: 40px;
@@ -20,87 +22,151 @@
   box-shadow: 0px 2px 25px rgba(230, 36, 41, 0.8);
 }
 
+/* Movie details container */
 .movieDetails {
-  position: relative;
-  display: block;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  align-items: flex-start;
+  gap: 20px;
   width: 100%;
   max-width: 1200px;
-  height: 285px;
+  margin-top: 20px;
 }
 
+/* Movie poster */
 .movieDetails img {
-  position: absolute;
-  top: 0;
-  left: 0;
+  flex: 0 0 200px;
   width: 200px;
   height: auto;
   border-radius: 10px;
 }
 
+/* Movie details text */
 .movieDetails h1 {
-  position: absolute;
-  top: -35px;
-  left: 230px;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #e62429;
+  margin-left: 20px;
 }
 
-#mry {
-  position: absolute;
-  top: 40px;
-  left: 230px;
+#mry, #ml {
+  display: inline-block;
+  margin: 10px 10px 0 0;
   background-color: yellow;
-  padding: 2px 8px;
+  padding: 5px 10px;
   border-radius: 8px;
   letter-spacing: 2px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #e62429;
 }
 
 #ml {
-  position: absolute;
-  top: 40px;
-  left: 305px;
   background-color: white;
-  padding: 2px 8px;
-  border-radius: 8px;
-  letter-spacing: 2px;
-  font-size: 1.5rem;
-  color: #e62429;
 }
 
 p {
-  position: absolute;
-  top: 97px;
-  left: 230px;
-  width: 500px;
+  flex: 1;
+  margin-top: 10px;
   background-color: rgba(230, 36, 41, 0.1);
   padding: 10px;
   border-radius: 8px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   color: #e62429;
 }
 
-#rating1 {
-  position: absolute;
-  top: 64px;
-  left: 380px;
+#rating1, #rating2 {
+  display: inline-block;
+  margin-top: 10px;
   background-color: white;
-  padding: 2px 8px;
+  padding: 5px 10px;
   border-radius: 8px;
-  margin-left: 10px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #e62429;
 }
-#rating2 {
-  position: absolute;
-  top: 64px;
-  left: 545px;
-  background-color: white;
-  padding: 2px 8px;
-  border-radius: 8px;
-  margin-left: 10px;
-  font-size: 1.5rem;
-  color: #e62429;
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .movieDetails {
+    gap: 15px;
+  }
+
+  .movieDetails h1 {
+    font-size: 2rem;
+  }
+
+  #mry, #ml {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  #rating1, #rating2 {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movieDetails {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .movieDetails img {
+    margin-bottom: 20px;
+  }
+
+  .movieDetails h1 {
+    font-size: 1.8rem;
+    margin-left: 0;
+  }
+
+  #mry, #ml {
+    font-size: 0.9rem;
+    margin: 5px 5px 0 0;
+  }
+
+  p {
+    font-size: 0.9rem;
+    width: 90%;
+  }
+
+  #rating1, #rating2 {
+    font-size: 0.8rem;
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .movieDetails {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .movieDetails img {
+    width: 150px; /* Smaller poster size */
+  }
+
+  .movieDetails h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  #mry, #ml {
+    font-size: 0.8rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 8px;
+  }
+
+  #rating1, #rating2 {
+    font-size: 0.7rem;
+  }
 }

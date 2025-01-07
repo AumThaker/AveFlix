@@ -70,7 +70,7 @@
 
 .LoginForm button {
     padding: 12px 20px;
-    margin-top: 15px;
+    margin-top: 30px;
     border: none;
     border-radius: 5px;
     background: #ff4500; /* Marvel red */
@@ -122,4 +122,70 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     width: 100%;
+}
+@media screen and (max-width: 1200px) {
+    .loginForm {
+        width: 35vw; /* Adjust width for tablets and smaller devices */
+    }
+
+    .LoginForm {
+        max-width: 90%; /* Increase flexibility */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .loginForm {
+        width: 80vw; /* Adjust width for tablets and smaller devices */
+    }
+
+    .LoginForm {
+        max-width: 90%; /* Increase flexibility */
+    }
+    .loggedin {
+        width: 75vw; /* Adjust container width for tablets */
+        padding: 15px;
+    }
+
+    .loggedin h1 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    .loggedin button {
+        font-size: 0.9rem; /* Smaller font for buttons */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .loginForm {
+        width: 80vw; /* Full width for mobile devices */
+        padding: 10px;
+    }
+
+    .LoginForm input {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .LoginForm button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    #errorMsg {
+        font-size: 0.8rem;
+    }
+    .loggedin {
+        width: 85vw; /* Almost full width on small screens */
+        padding: 10px;
+    }
+
+    .loggedin h1 {
+        font-size: 1.2rem; /* Smaller heading size */
+    }
+
+    .loggedin button {
+        font-size: 0.85rem; /* Adjust button font size */
+        padding: 8px 12px; /* Smaller padding for buttons */
+    }
 }

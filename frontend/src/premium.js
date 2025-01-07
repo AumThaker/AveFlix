@@ -136,7 +136,7 @@ export default function Premium() {
         <>
         <div className="premiumBox">
         <h1>Premium Member</h1>
-        <span>Rs 10 per month</span>
+        <span>Rs 10 per month {`(Non-refundable)`}</span>
         <button onClick={handlePayment}>Pay Now</button>
         </div>
           {res?navigate("/"):null}

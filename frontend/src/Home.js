@@ -80,11 +80,20 @@ export default function Home() {
       <nav>
         <h1>AveFlix</h1>
         {!tokenStatus ? (
+          <>
+          <Link to='/termandconditions'>
+          <h2>Terms And Conditions</h2>
+          </Link>
           <Link to="/login">
             <button>Login Now</button>
           </Link>
+          </>
         ) : (
           <div className="leftNav">
+            <h2>Terms And Conditions</h2>
+            <h2>Privacy And Shipping Policy</h2>
+            <h2>Cancellation/Refund</h2>
+            <h2>Contact us</h2>
             <Link to="/premium"><button id="premium">Premium</button></Link>
             <h2>{userData.user.username}</h2>
           </div>

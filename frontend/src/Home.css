@@ -303,3 +303,39 @@ nav h2{
     background-color: #c71e24; /* Slightly darker red on hover */
     cursor: pointer; /* Indicate interactivity */
   }
+
+  footer{
+    background-color: red;
+  }
+  @media screen and (max-width: 1200px) {
+    .movies {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav h1 {
+        font-size: 1.2rem;
+    }
+
+    nav button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .movies {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .movies {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .notification {
+        bottom: 10px;
+        right: 10px;
+        font-size: 12px;
+    }
+}

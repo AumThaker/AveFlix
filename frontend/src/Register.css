@@ -1,15 +1,11 @@
-body{
+/* General body styling */
+body {
     margin: 0;
     padding: 0;
     background-color: rgb(31, 31, 31);
 }
-#intro{
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    filter: blur(13px);
-}
+
+/* Registration container */
 .registration {
     display: flex;
     flex-direction: column;
@@ -19,36 +15,41 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 25vw;
-    height: 70vh;
-    background: rgba(255, 255, 255, 0.1); /* Transparent effect */
-    backdrop-filter: blur(10px); /* Frosted glass effect */
-    border-radius: 15px; /* Smooth rounded corners */
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border */
+    width: 90vw; /* Default for small screens */
+    max-width: 25vw; /* Max width for larger screens */
+    height: auto; /* Dynamic height based on content */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
     font-family: Arial, sans-serif;
+    text-align: center;
 }
-.registration h1{
+
+/* Heading */
+.registration h1 {
     font-family: "Impact", sans-serif;
-    font-weight: normal;
-    text-transform: uppercase;
+    font-size: 1.8rem;
     color: #af2f00;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
 }
+
+/* Registration form */
 .RegForm {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 15px;
-    padding: 20px;
-    width: 300px;
-    border-radius: 10px;
-    font-family: "Segoe UI", sans-serif;
-    color: #fff;
+    width: 90%; /* Full width for smaller screens */
+    max-width: 300px; /* Max width for larger screens */
     margin: auto;
 }
+
 .RegForm label {
     font-size: 1rem;
     margin-bottom: 5px;
@@ -73,27 +74,21 @@ body{
     color: #ddd;
 }
 
-.RegForm .condition, 
+.RegForm .condition,
 .RegForm .conditions {
     font-size: 0.9rem;
     text-align: left;
     width: 100%;
-    color: #ffcccb; /* Light red for password hints */
+    color: #ffcccb;
     margin-top: -10px;
 }
 
 .RegForm .conditions {
-    margin-left: 20px; /* Indent for better visibility */
+    margin-left: 20px;
 }
 
-.RegForm .active{
+.RegForm .active {
     color: green;
-}
-
-.RegForm span#errUser {
-    font-size: 0.8rem;
-    color: #f77; /* Error color */
-    align-self: flex-start;
 }
 
 .RegForm button {
@@ -101,7 +96,7 @@ body{
     margin-top: 15px;
     border: none;
     border-radius: 5px;
-    background: #ff4500; /* Marvel red */
+    background: #ff4500;
     color: white;
     font-size: 1rem;
     cursor: pointer;
@@ -117,37 +112,67 @@ body{
     background: #cc3300;
 }
 
-#errorMsg{
+#errorMsg {
     color: red;
 }
-.registered {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 25vw;
-    height: 40vh;
-    background: rgba(255, 255, 255, 0.1); /* Transparent effect */
-    backdrop-filter: blur(10px); /* Frosted glass effect */
-    border-radius: 15px; /* Smooth rounded corners */
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border */
-    color: white;
-    font-family: Arial, sans-serif;
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .registration {
+        width: 60vw; /* Adjust container width for medium screens */
+    }
+
+    .RegForm {
+        width: 80%; /* Adjust form width */
+    }
+
+    .registration h1 {
+        font-size: 1.6rem; /* Slightly smaller heading */
+    }
 }
-.registered button {
-    padding: 12px 20px;
-    margin-top: 15px;
-    border: none;
-    border-radius: 5px;
-    background: #ff4500; /* Marvel red */
-    color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
+
+@media screen and (max-width: 768px) {
+    .registration {
+        width: 75vw; /* Adjust container width for tablets */
+    }
+
+    .RegForm {
+        width: 90%; /* Full width for form */
+    }
+
+    .registration h1 {
+        font-size: 1.4rem; /* Adjust heading size */
+    }
+
+    .RegForm button {
+        font-size: 0.9rem; /* Smaller button font */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .registration {
+        width: 95vw; /* Almost full width on small screens */
+        padding: 15px;
+    }
+
+    .registration h1 {
+        font-size: 1.2rem; /* Smaller heading size */
+    }
+
+    .RegForm label {
+        font-size: 0.9rem; /* Smaller label font size */
+    }
+
+    .RegForm input {
+        font-size: 0.9rem; /* Adjust input size */
+    }
+
+    .RegForm .conditions {
+        font-size: 0.8rem; /* Smaller font for password conditions */
+    }
+
+    .RegForm button {
+        font-size: 0.85rem; /* Smaller button font */
+        padding: 10px 15px; /* Adjust button padding */
+    }
 }
