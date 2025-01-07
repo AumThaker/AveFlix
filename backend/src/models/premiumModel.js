@@ -23,7 +23,7 @@ const premiumSchema = mongoose.Schema(
 )
 
 premiumSchema.methods.Expiration = function(){
-    const expiration = new Date(this.paymentDate.getTime() + 8*60*1000);
+    const expiration = new Date(this.paymentDate.getTime() + 30*24*60*60*1000);
     this.expirationDate = expiration
 }
 
