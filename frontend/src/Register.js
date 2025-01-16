@@ -68,6 +68,7 @@ function Form({setResult}){
         <span className={`conditions ${low ? "active" : "inactive"}`}>1 Lowercase letter</span>
         <span className={`conditions ${num ? "active" : "inactive"}`}>1 Numeric character</span>
         <span className={`conditions ${sc ? "active" : "inactive"}`}>1 Special character</span>
+        <span className="conditions">8 length password</span>
         <label htmlFor="email">Enter Your EmailId</label>
         <input type="email" id="email" name="email"></input>
         <span id="errorMsg">{errorMsg}</span>
